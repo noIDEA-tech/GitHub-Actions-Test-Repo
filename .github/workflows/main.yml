@@ -1,0 +1,16 @@
+name: Hello GitHub Actions
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Hello World
+        run: echo "Hello GitHub Actions!"
+      - name: List files
+        run: ls -la
